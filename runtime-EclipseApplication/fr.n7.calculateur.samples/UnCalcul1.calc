@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<calcul:UnCalcul xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:calcul="http://calcul" name="Addition">
+  <calculElements xsi:type="calcul:Entree" name="x" valeur="2.0" linkToSuccessor="//@calculElements.4"/>
+  <calculElements xsi:type="calcul:Constante" name="var" valeur="1.0" linkToSuccessor="//@calculElements.5"/>
+  <calculElements xsi:type="calcul:Binaire" name="Add" valeur="3.0" linkToPredecessor="//@calculElements.4 //@calculElements.5" linkToSuccessor="//@calculElements.6"/>
+  <calculElements xsi:type="calcul:Sortie" name="res" valeur="3.0" linkToPredecessor="//@calculElements.6"/>
+  <calculElements xsi:type="calcul:Link" name="xToAdd" predecessor="//@calculElements.0" successor="//@calculElements.2"/>
+  <calculElements xsi:type="calcul:Link" name="consToAdd" predecessor="//@calculElements.1" successor="//@calculElements.2"/>
+  <calculElements xsi:type="calcul:Link" name="binToRes" predecessor="//@calculElements.2" successor="//@calculElements.3"/>
+</calcul:UnCalcul>

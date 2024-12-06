@@ -1,0 +1,73 @@
+[comment encoding = UTF-8 /]
+[module toTINA('http://petrinet')]
+
+
+[template public petrinetToTINA(aPetriNet : PetriNet)]
+[comment @main/]
+[file (aPetriNet.name + '.net', false, 'UTF-8')]
+net [aPetriNet.name/]
+[let pls : OrderedSet(Place) = aPetriNet.getPLs()] 
+[if (pls->size() > 0)]
+[for (pl : Place | pls)]
+pl [pl.name/] ([pl.poids/])
+[/for]
+[/if]
+[/let]
+[let trs : OrderedSet(Transition) = aPetriNet.getTRs() ]
+[if (trs->size() > 0)]
+[for (tr : Transition | trs)]
+tr [tr.toTINA()/]
+[/for]
+[/if]
+[/let]
+
+[/file]
+[/template]
+
+
+[template public toTINA(tr : Transition) post (trim()) ]
+[tr.name/][if tr.arrivee->size() > 0][for (arc: Arc | tr.arrivee)
+        before (' ') separator (' ') after(' -> ')
+][arc.afficherSourceArc()/][/for][/if]
+[if tr.depart->size() > 0] [for (arc: Arc | tr.depart)
+        before ('') separator (' ') after('')
+][arc.afficherCibleArc()/][/for][/if]
+[/template]
+
+
+[query public afficherSourceArc(arc : Arc) : String =
+	if arc.poids > 1 then
+		arc.source.name + '*' + arc.poids
+	else
+		if arc.lecteur then
+			arc.source.name + '?1'
+		else
+			arc.source.name
+		endif
+	endif
+/]
+
+[query public afficherCibleArc(arc : Arc) : String =
+	if arc.poids > 1 then
+		arc.cible.name + '*' + arc.poids
+	else
+		if arc.lecteur then
+			arc.cible.name + '?1'
+		else
+			arc.cible.name
+		endif
+	endif
+/]
+
+
+[query public getPLs(p: PetriNet) : OrderedSet(Place) = 
+	p.noeuds->select( e | e.oclIsKindOf(Place) )
+	->collect( e | e.oclAsType(Place) )
+	->asOrderedSet()
+/]
+
+[query public getTRs(p: PetriNet) : OrderedSet(Transition) = 
+	p.noeuds->select( e | e.oclIsKindOf(Transition) )
+	->collect( e | e.oclAsType(Transition) )
+	->asOrderedSet()
+/]

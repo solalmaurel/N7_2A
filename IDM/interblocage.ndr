@@ -1,0 +1,28 @@
+t 150.0 120.0 OqpA 0 w n
+t 425.0 120.0 OqpAB 0 w n
+t 425.0 370.0 OqpB 0 w n
+t 150.0 370.0 OqpBA 0 w n
+p 30.0 230.0 A 1 n
+p 535.0 230.0 B 1 n
+p 265.0 230.0 idle 2 n
+p 265.0 120.0 WaitB 0 n
+p 265.0 370.0 WaitA 0 n
+e OqpBA idle 1 n
+e OqpBA A 1 n
+e OqpBA 0.7500000006 117.96113 B 0.7500000005 219.07067 1 n
+e A OqpBA 1 n
+e WaitA OqpBA 1 n
+e OqpB WaitA 1 n
+e B OqpB 1 n
+e idle OqpB 1 n
+e OqpAB idle 1 n
+e OqpAB 0.25 109.535335 A 0.2500000002 168.5159 1 n
+e OqpAB B 1 n
+e B OqpAB 1 n
+e WaitB OqpAB 1 n
+e OqpA WaitB 1 n
+e A OqpA 1 n
+e idle OqpA 1 n
+h interblocage
+
+

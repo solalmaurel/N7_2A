@@ -1,0 +1,40 @@
+/**
+ */
+package calcul;
+
+import org.eclipse.emf.common.util.EList;
+
+import org.eclipse.emf.ecore.EObject;
+
+/**
+ * <!-- begin-user-doc -->
+ * A representation of the model object '<em><b>Un Calcul</b></em>'.
+ * <!-- end-user-doc -->
+ *
+ * <p>
+ * The following features are supported:
+ * </p>
+ * <ul>
+ *   <li>{@link calcul.UnCalcul#getCalculElements <em>Calcul Elements</em>}</li>
+ * </ul>
+ *
+ * @see calcul.CalculPackage#getUnCalcul()
+ * @model
+ * @generated
+ */
+public interface UnCalcul extends EObject {
+	/**
+	 * Returns the value of the '<em><b>Calcul Elements</b></em>' containment reference list.
+	 * The list contents are of type {@link calcul.CalculElements}.
+	 * It is bidirectional and its opposite is '{@link calcul.CalculElements#getUnCalcul <em>Un Calcul</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Calcul Elements</em>' containment reference list.
+	 * @see calcul.CalculPackage#getUnCalcul_CalculElements()
+	 * @see calcul.CalculElements#getUnCalcul
+	 * @model opposite="unCalcul" containment="true"
+	 * @generated
+	 */
+	EList<CalculElements> getCalculElements();
+
+} // UnCalcul

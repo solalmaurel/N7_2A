@@ -1,0 +1,40 @@
+Problem:    ModelCiment
+Rows:       3
+Columns:    2
+Non-zeros:  6
+Status:     OPTIMAL
+Objective:  BeneficeTotal = 11375 (MAXimum)
+
+   No.   Row name   St   Activity     Lower bound   Upper bound    Marginal
+------ ------------ -- ------------- ------------- ------------- -------------
+     1 RespectCapaciteDeChaqueMachine[Four2]
+                    NS           360           360             =       1.04167 
+     2 RespectCapaciteDeChaqueMachine[Broyeuse2]
+                    NS           480           480             =       22.9167 
+     3 BeneficeTotal
+                    B          11375                             
+
+   No. Column name  St   Activity     Lower bound   Upper bound    Marginal
+------ ------------ -- ------------- ------------- ------------- -------------
+     1 Q[11]        B           5.25             0               
+     2 Q[22]        B           12.5             0               
+
+Karush-Kuhn-Tucker optimality conditions:
+
+KKT.PE: max.abs.err = 5.68e-14 on row 2
+        max.rel.err = 5.92e-17 on row 2
+        High quality
+
+KKT.PB: max.abs.err = 0.00e+00 on row 0
+        max.rel.err = 0.00e+00 on row 0
+        High quality
+
+KKT.DE: max.abs.err = 1.14e-13 on column 1
+        max.rel.err = 1.14e-16 on column 1
+        High quality
+
+KKT.DB: max.abs.err = 0.00e+00 on row 0
+        max.rel.err = 0.00e+00 on row 0
+        High quality
+
+End of output

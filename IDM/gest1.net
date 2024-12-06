@@ -1,0 +1,5 @@
+pl CL1_G1_req
+tr alloc_cl1 CL1_G1_req -> G1_CL1_ack
+tr CL1_G1_release -> 
+
+

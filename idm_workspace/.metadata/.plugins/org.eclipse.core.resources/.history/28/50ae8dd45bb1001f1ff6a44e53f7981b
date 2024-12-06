@@ -1,0 +1,5 @@
+package calcul.validation;
+
+public class ValidationResult {
+
+}

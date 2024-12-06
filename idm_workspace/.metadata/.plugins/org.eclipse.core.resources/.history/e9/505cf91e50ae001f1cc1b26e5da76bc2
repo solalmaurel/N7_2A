@@ -1,0 +1,168 @@
+/**
+ */
+package calcul.impl;
+
+import calcul.CalculElements;
+import calcul.CalculPackage;
+import calcul.UnCalcul;
+
+import java.util.Collection;
+
+import org.eclipse.emf.common.notify.NotificationChain;
+
+import org.eclipse.emf.common.util.EList;
+
+import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
+
+import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+
+import org.eclipse.emf.ecore.util.EObjectContainmentWithInverseEList;
+import org.eclipse.emf.ecore.util.InternalEList;
+
+/**
+ * <!-- begin-user-doc -->
+ * An implementation of the model object '<em><b>Un Calcul</b></em>'.
+ * <!-- end-user-doc -->
+ * <p>
+ * The following features are implemented:
+ * </p>
+ * <ul>
+ *   <li>{@link calcul.impl.UnCalculImpl#getCalculElements <em>Calcul Elements</em>}</li>
+ * </ul>
+ *
+ * @generated
+ */
+public class UnCalculImpl extends MinimalEObjectImpl.Container implements UnCalcul {
+	/**
+	 * The cached value of the '{@link #getCalculElements() <em>Calcul Elements</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getCalculElements()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<CalculElements> calculElements;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected UnCalculImpl() {
+		super();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	protected EClass eStaticClass() {
+		return CalculPackage.Literals.UN_CALCUL;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EList<CalculElements> getCalculElements() {
+		if (calculElements == null) {
+			calculElements = new EObjectContainmentWithInverseEList<CalculElements>(CalculElements.class, this, CalculPackage.UN_CALCUL__CALCUL_ELEMENTS, CalculPackage.CALCUL_ELEMENTS__UN_CALCUL);
+		}
+		return calculElements;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	@Override
+	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case CalculPackage.UN_CALCUL__CALCUL_ELEMENTS:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getCalculElements()).basicAdd(otherEnd, msgs);
+		}
+		return super.eInverseAdd(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case CalculPackage.UN_CALCUL__CALCUL_ELEMENTS:
+				return ((InternalEList<?>)getCalculElements()).basicRemove(otherEnd, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object eGet(int featureID, boolean resolve, boolean coreType) {
+		switch (featureID) {
+			case CalculPackage.UN_CALCUL__CALCUL_ELEMENTS:
+				return getCalculElements();
+		}
+		return super.eGet(featureID, resolve, coreType);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	@Override
+	public void eSet(int featureID, Object newValue) {
+		switch (featureID) {
+			case CalculPackage.UN_CALCUL__CALCUL_ELEMENTS:
+				getCalculElements().clear();
+				getCalculElements().addAll((Collection<? extends CalculElements>)newValue);
+				return;
+		}
+		super.eSet(featureID, newValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void eUnset(int featureID) {
+		switch (featureID) {
+			case CalculPackage.UN_CALCUL__CALCUL_ELEMENTS:
+				getCalculElements().clear();
+				return;
+		}
+		super.eUnset(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public boolean eIsSet(int featureID) {
+		switch (featureID) {
+			case CalculPackage.UN_CALCUL__CALCUL_ELEMENTS:
+				return calculElements != null && !calculElements.isEmpty();
+		}
+		return super.eIsSet(featureID);
+	}
+
+} //UnCalculImpl

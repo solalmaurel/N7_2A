@@ -1,0 +1,190 @@
+/**
+ */
+package calcul.impl;
+
+import calcul.CalculElements;
+import calcul.CalculPackage;
+import calcul.Expression;
+import calcul.Link;
+import java.util.Collection;
+
+import org.eclipse.emf.common.notify.NotificationChain;
+
+import org.eclipse.emf.common.util.EList;
+
+import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
+
+import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.InternalEList;
+
+/**
+ * <!-- begin-user-doc -->
+ * An implementation of the model object '<em><b>Elements</b></em>'.
+ * <!-- end-user-doc -->
+ * <p>
+ * The following features are implemented:
+ * </p>
+ * <ul>
+ *   <li>{@link calcul.impl.CalculElementsImpl#getExpression <em>Expression</em>}</li>
+ *   <li>{@link calcul.impl.CalculElementsImpl#getVals <em>Vals</em>}</li>
+ * </ul>
+ *
+ * @generated
+ */
+public class CalculElementsImpl extends MinimalEObjectImpl.Container implements CalculElements {
+	/**
+	 * The cached value of the '{@link #getExpression() <em>Expression</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getExpression()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Expression> expression;
+
+	/**
+	 * The cached value of the '{@link #getVals() <em>Vals</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getVals()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Link> vals;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected CalculElementsImpl() {
+		super();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	protected EClass eStaticClass() {
+		return CalculPackage.Literals.CALCUL_ELEMENTS;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EList<Expression> getExpression() {
+		if (expression == null) {
+			expression = new EObjectContainmentEList<Expression>(Expression.class, this, CalculPackage.CALCUL_ELEMENTS__EXPRESSION);
+		}
+		return expression;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EList<Link> getVals() {
+		if (vals == null) {
+			vals = new EObjectContainmentEList<Link>(Link.class, this, CalculPackage.CALCUL_ELEMENTS__VALS);
+		}
+		return vals;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case CalculPackage.CALCUL_ELEMENTS__EXPRESSION:
+				return ((InternalEList<?>)getExpression()).basicRemove(otherEnd, msgs);
+			case CalculPackage.CALCUL_ELEMENTS__VALS:
+				return ((InternalEList<?>)getVals()).basicRemove(otherEnd, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object eGet(int featureID, boolean resolve, boolean coreType) {
+		switch (featureID) {
+			case CalculPackage.CALCUL_ELEMENTS__EXPRESSION:
+				return getExpression();
+			case CalculPackage.CALCUL_ELEMENTS__VALS:
+				return getVals();
+		}
+		return super.eGet(featureID, resolve, coreType);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	@Override
+	public void eSet(int featureID, Object newValue) {
+		switch (featureID) {
+			case CalculPackage.CALCUL_ELEMENTS__EXPRESSION:
+				getExpression().clear();
+				getExpression().addAll((Collection<? extends Expression>)newValue);
+				return;
+			case CalculPackage.CALCUL_ELEMENTS__VALS:
+				getVals().clear();
+				getVals().addAll((Collection<? extends Link>)newValue);
+				return;
+		}
+		super.eSet(featureID, newValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void eUnset(int featureID) {
+		switch (featureID) {
+			case CalculPackage.CALCUL_ELEMENTS__EXPRESSION:
+				getExpression().clear();
+				return;
+			case CalculPackage.CALCUL_ELEMENTS__VALS:
+				getVals().clear();
+				return;
+		}
+		super.eUnset(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public boolean eIsSet(int featureID) {
+		switch (featureID) {
+			case CalculPackage.CALCUL_ELEMENTS__EXPRESSION:
+				return expression != null && !expression.isEmpty();
+			case CalculPackage.CALCUL_ELEMENTS__VALS:
+				return vals != null && !vals.isEmpty();
+		}
+		return super.eIsSet(featureID);
+	}
+
+} //CalculElementsImpl

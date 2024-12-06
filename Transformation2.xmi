@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="ASCII"?>
+<petrinet:PetriNet xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:petrinet="http://petrinet" name="Exemple_sujet">
+  <noeuds xsi:type="petrinet:Place" name="Concepteur_stock" depart="//@arcs.5" arrivee="//@arcs.6" poids="3"/>
+  <noeuds xsi:type="petrinet:Place" name="Developpeur_stock" depart="//@arcs.23" arrivee="//@arcs.24" poids="2"/>
+  <noeuds xsi:type="petrinet:Place" name="Machine_stock" depart="//@arcs.7 //@arcs.14 //@arcs.25 //@arcs.32" arrivee="//@arcs.8 //@arcs.15 //@arcs.26 //@arcs.33" poids="4"/>
+  <noeuds xsi:type="petrinet:Place" name="Redacteur_stock" depart="//@arcs.16" arrivee="//@arcs.17" poids="1"/>
+  <noeuds xsi:type="petrinet:Place" name="Testeur_stock" depart="//@arcs.34" arrivee="//@arcs.35" poids="2"/>
+  <noeuds xsi:type="petrinet:Place" name="Conception_wait" depart="//@arcs.0" poids="1"/>
+  <noeuds xsi:type="petrinet:Place" name="Conception_inProgress" depart="//@arcs.3" arrivee="//@arcs.1" poids="0"/>
+  <noeuds xsi:type="petrinet:Place" name="Conception_finished" depart="//@arcs.36 //@arcs.39" arrivee="//@arcs.4" poids="0"/>
+  <noeuds xsi:type="petrinet:Place" name="Conception_started" depart="//@arcs.37 //@arcs.38" arrivee="//@arcs.2" poids="0"/>
+  <noeuds xsi:type="petrinet:Transition" name="Conception_start" depart="//@arcs.1 //@arcs.2" arrivee="//@arcs.0 //@arcs.5 //@arcs.7"/>
+  <noeuds xsi:type="petrinet:Transition" name="Conception_finish" depart="//@arcs.4 //@arcs.6 //@arcs.8" arrivee="//@arcs.3"/>
+  <noeuds xsi:type="petrinet:Place" name="RedactionDoc_wait" depart="//@arcs.9" poids="1"/>
+  <noeuds xsi:type="petrinet:Place" name="RedactionDoc_inProgress" depart="//@arcs.12" arrivee="//@arcs.10" poids="0"/>
+  <noeuds xsi:type="petrinet:Place" name="RedactionDoc_finished" arrivee="//@arcs.13" poids="0"/>
+  <noeuds xsi:type="petrinet:Place" name="RedactionDoc_started" arrivee="//@arcs.11" poids="0"/>
+  <noeuds xsi:type="petrinet:Transition" name="RedactionDoc_start" depart="//@arcs.10 //@arcs.11" arrivee="//@arcs.9 //@arcs.14 //@arcs.16 //@arcs.38"/>
+  <noeuds xsi:type="petrinet:Transition" name="RedactionDoc_finish" depart="//@arcs.13 //@arcs.15 //@arcs.17" arrivee="//@arcs.12 //@arcs.36"/>
+  <noeuds xsi:type="petrinet:Place" name="Programmation_wait" depart="//@arcs.18" poids="1"/>
+  <noeuds xsi:type="petrinet:Place" name="Programmation_inProgress" depart="//@arcs.21" arrivee="//@arcs.19" poids="0"/>
+  <noeuds xsi:type="petrinet:Place" name="Programmation_finished" depart="//@arcs.40" arrivee="//@arcs.22" poids="0"/>
+  <noeuds xsi:type="petrinet:Place" name="Programmation_started" arrivee="//@arcs.20" poids="0"/>
+  <noeuds xsi:type="petrinet:Transition" name="Programmation_start" depart="//@arcs.19 //@arcs.20" arrivee="//@arcs.18 //@arcs.23 //@arcs.25 //@arcs.39"/>
+  <noeuds xsi:type="petrinet:Transition" name="Programmation_finish" depart="//@arcs.22 //@arcs.24 //@arcs.26" arrivee="//@arcs.21"/>
+  <noeuds xsi:type="petrinet:Place" name="RdactionTests_wait" depart="//@arcs.27" poids="1"/>
+  <noeuds xsi:type="petrinet:Place" name="RdactionTests_inProgress" depart="//@arcs.30" arrivee="//@arcs.28" poids="0"/>
+  <noeuds xsi:type="petrinet:Place" name="RdactionTests_finished" arrivee="//@arcs.31" poids="0"/>
+  <noeuds xsi:type="petrinet:Place" name="RdactionTests_started" arrivee="//@arcs.29" poids="0"/>
+  <noeuds xsi:type="petrinet:Transition" name="RdactionTests_start" depart="//@arcs.28 //@arcs.29" arrivee="//@arcs.27 //@arcs.32 //@arcs.34 //@arcs.37"/>
+  <noeuds xsi:type="petrinet:Transition" name="RdactionTests_finish" depart="//@arcs.31 //@arcs.33 //@arcs.35" arrivee="//@arcs.30 //@arcs.40"/>
+  <arcs poids="1" source="//@noeuds.5" cible="//@noeuds.9"/>
+  <arcs poids="1" source="//@noeuds.9" cible="//@noeuds.6"/>
+  <arcs poids="1" source="//@noeuds.9" cible="//@noeuds.8"/>
+  <arcs poids="1" source="//@noeuds.6" cible="//@noeuds.10"/>
+  <arcs poids="1" source="//@noeuds.10" cible="//@noeuds.7"/>
+  <arcs poids="2" source="//@noeuds.0" cible="//@noeuds.9" name="Concepteur_tostart"/>
+  <arcs poids="1" source="//@noeuds.10" cible="//@noeuds.0" name="Concepteur_tostock"/>
+  <arcs poids="2" source="//@noeuds.2" cible="//@noeuds.9" name="Machine_tostart"/>
+  <arcs poids="1" source="//@noeuds.10" cible="//@noeuds.2" name="Machine_tostock"/>
+  <arcs poids="1" source="//@noeuds.11" cible="//@noeuds.15"/>
+  <arcs poids="1" source="//@noeuds.15" cible="//@noeuds.12"/>
+  <arcs poids="1" source="//@noeuds.15" cible="//@noeuds.14"/>
+  <arcs poids="1" source="//@noeuds.12" cible="//@noeuds.16"/>
+  <arcs poids="1" source="//@noeuds.16" cible="//@noeuds.13"/>
+  <arcs poids="1" source="//@noeuds.2" cible="//@noeuds.15" name="Machine_tostart"/>
+  <arcs poids="1" source="//@noeuds.16" cible="//@noeuds.2" name="Machine_tostock"/>
+  <arcs poids="1" source="//@noeuds.3" cible="//@noeuds.15" name="Redacteur_tostart"/>
+  <arcs poids="1" source="//@noeuds.16" cible="//@noeuds.3" name="Redacteur_tostock"/>
+  <arcs poids="1" source="//@noeuds.17" cible="//@noeuds.21"/>
+  <arcs poids="1" source="//@noeuds.21" cible="//@noeuds.18"/>
+  <arcs poids="1" source="//@noeuds.21" cible="//@noeuds.20"/>
+  <arcs poids="1" source="//@noeuds.18" cible="//@noeuds.22"/>
+  <arcs poids="1" source="//@noeuds.22" cible="//@noeuds.19"/>
+  <arcs poids="2" source="//@noeuds.1" cible="//@noeuds.21" name="Developpeur_tostart"/>
+  <arcs poids="1" source="//@noeuds.22" cible="//@noeuds.1" name="Developpeur_tostock"/>
+  <arcs poids="3" source="//@noeuds.2" cible="//@noeuds.21" name="Machine_tostart"/>
+  <arcs poids="1" source="//@noeuds.22" cible="//@noeuds.2" name="Machine_tostock"/>
+  <arcs poids="1" source="//@noeuds.23" cible="//@noeuds.27"/>
+  <arcs poids="1" source="//@noeuds.27" cible="//@noeuds.24"/>
+  <arcs poids="1" source="//@noeuds.27" cible="//@noeuds.26"/>
+  <arcs poids="1" source="//@noeuds.24" cible="//@noeuds.28"/>
+  <arcs poids="1" source="//@noeuds.28" cible="//@noeuds.25"/>
+  <arcs poids="2" source="//@noeuds.2" cible="//@noeuds.27" name="Machine_tostart"/>
+  <arcs poids="1" source="//@noeuds.28" cible="//@noeuds.2" name="Machine_tostock"/>
+  <arcs poids="1" source="//@noeuds.4" cible="//@noeuds.27" name="Testeur_tostart"/>
+  <arcs poids="1" source="//@noeuds.28" cible="//@noeuds.4" name="Testeur_tostock"/>
+  <arcs poids="1" source="//@noeuds.7" cible="//@noeuds.16" name="F2F" lecteur="true"/>
+  <arcs poids="1" source="//@noeuds.8" cible="//@noeuds.27" name="S2S" lecteur="true"/>
+  <arcs poids="1" source="//@noeuds.8" cible="//@noeuds.15" name="S2S" lecteur="true"/>
+  <arcs poids="1" source="//@noeuds.7" cible="//@noeuds.21" name="F2S" lecteur="true"/>
+  <arcs poids="1" source="//@noeuds.19" cible="//@noeuds.28" name="F2F" lecteur="true"/>
+</petrinet:PetriNet>

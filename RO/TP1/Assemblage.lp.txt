@@ -1,0 +1,16 @@
+\* Problem: assemblage de velos *\
+
+Maximize
+Benefice: 700 N1 + 300 N2
+
+Subject To
+TempsDeProd : 0.05 N1 + 0.06 N2 <= 60
+CapacitedeParking : 2.5 N1 + N2 <= 1500
+Batteries : N1 <= 700
+
+\* To declare integer variables :   
+Integer 
+N1 
+N2  
+
+End

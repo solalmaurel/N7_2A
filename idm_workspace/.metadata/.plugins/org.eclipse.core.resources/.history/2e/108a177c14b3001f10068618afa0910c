@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<calcul:CalculElements
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:calcul="http://calcul">
+  <expression
+      xsi:type="calcul:Entree"
+      name="min"
+      valeur="1.0"
+      linkToSuccessor="//@vals.1"/>
+  <expression
+      xsi:type="calcul:Entree"
+      name="max"
+      valeur="6.0"
+      linkToSuccessor="//@vals.0"/>
+  <expression
+      xsi:type="calcul:Binaire"
+      name="Add"
+      valeur="7.0"
+      linkToPredecessor="//@vals.1 //@vals.0"
+      linkToSuccessor="//@vals.2"/>
+  <expression
+      xsi:type="calcul:Binaire"
+      name="Div"
+      valeur="3.5"
+      linkToPredecessor="//@vals.2 //@vals.3"
+      linkToSuccessor="//@vals.4"
+      binaryType="Division"/>
+  <expression
+      xsi:type="calcul:Constante"
+      name="deux"
+      valeur="2.0"
+      linkToSuccessor="//@vals.3"/>
+  <expression
+      xsi:type="calcul:Sortie"
+      name="resultat"
+      valeur="3.5"
+      linkToPredecessor="//@vals.4"/>
+  <vals name="maxToAdd"
+      predecessor="//@expression.1"
+      successor="//@expression.2"/>
+  <vals name="minToAdd"
+      predecessor="//@expression.0"
+      successor="//@expression.2"/>
+  <vals name="AddToDiv"
+      predecessor="//@expression.2"
+      successor="//@expression.3"/>
+  <vals name="ConsToDiv"
+      predecessor="//@expression.4"
+      successor="//@expression.3"/>
+  <vals name="DivToSortie"
+      predecessor="//@expression.3"
+      successor="//@expression.5"/>
+</calcul:CalculElements>

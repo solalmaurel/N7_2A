@@ -1,0 +1,6 @@
+pl Prod (1)
+pl Cons (-6)
+
+tr Trans1falseArcT1C -> falseArcPT1
+tr Trans2falseArcT2P -> falseArcCT2
+

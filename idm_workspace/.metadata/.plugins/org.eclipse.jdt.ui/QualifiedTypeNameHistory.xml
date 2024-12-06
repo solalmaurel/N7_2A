@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="simplepdl.Stock"/>
+    <fullyQualifiedTypeName name="petrinet.util.PetrinetSwitch"/>
+    <fullyQualifiedTypeName name="petrinet.PetriNet"/>
+    <fullyQualifiedTypeName name="petrinet.Noeud"/>
+    <fullyQualifiedTypeName name="petrinet.Place"/>
+    <fullyQualifiedTypeName name="petrinet.Transition"/>
+</qualifiedTypeNameHistroy>

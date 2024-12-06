@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<petrinet:PetriNet
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:petrinet="http://petrinet"
+    name="Tina">
+  <noeuds xsi:type="petrinet:Place"
+      name="place1"
+      depart="//@arcs.0"
+      poids="1"/>
+  <noeuds xsi:type="petrinet:Place"
+      name="place2"
+      arrivee="//@arcs.1"
+      poids="0"/>
+  <noeuds xsi:type="petrinet:Transition"
+      name="trans"
+      depart="//@arcs.1"
+      arrivee="//@arcs.0"/>
+  <arcs poids="1"
+      source="//@noeuds.0"
+      cible="//@noeuds.2"
+      name="arc1"/>
+  <arcs poids="0"
+      source="//@noeuds.2"
+      cible="//@noeuds.1"
+      name="arc2"/>
+</petrinet:PetriNet>

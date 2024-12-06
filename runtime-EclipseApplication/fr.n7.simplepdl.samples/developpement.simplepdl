@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<simplepdl:Process xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:simplepdl="http://simplepdl" name="developpement">
+  <processElements xsi:type="simplepdl:WorkDefinition" linksToSuccessors="//@processElements.4 //@processElements.5 //@processElements.6 //@processElements.7" name="Conception">
+    <ressource occurrences="2" stock="//@processElements.10"/>
+    <ressource occurrences="2"/>
+  </processElements>
+  <processElements xsi:type="simplepdl:WorkDefinition" linksToPredecessors="//@processElements.4 //@processElements.5" name="RedactionDoc">
+    <ressource occurrences="1" stock="//@processElements.12"/>
+    <ressource occurrences="1" stock="//@processElements.13"/>
+  </processElements>
+  <processElements xsi:type="simplepdl:WorkDefinition" linksToPredecessors="//@processElements.6 //@processElements.9" linksToSuccessors="//@processElements.8" name="Programmation"/>
+  <processElements xsi:type="simplepdl:WorkDefinition" linksToPredecessors="//@processElements.7 //@processElements.8" name="RedactionTests"/>
+  <processElements xsi:type="simplepdl:WorkSequence" predecessor="//@processElements.0" successor="//@processElements.1"/>
+  <processElements xsi:type="simplepdl:WorkSequence" linkType="finishToFinish" predecessor="//@processElements.0" successor="//@processElements.1"/>
+  <processElements xsi:type="simplepdl:WorkSequence" linkType="finishToStart" predecessor="//@processElements.0" successor="//@processElements.2"/>
+  <processElements xsi:type="simplepdl:WorkSequence" predecessor="//@processElements.0" successor="//@processElements.3"/>
+  <processElements xsi:type="simplepdl:WorkSequence" linkType="finishToFinish" predecessor="//@processElements.2" successor="//@processElements.3"/>
+  <processElements xsi:type="simplepdl:WorkSequence" linkType="startToFinish" successor="//@processElements.2"/>
+  <processElements xsi:type="simplepdl:Stock" quantite="3" name="Concepteur" ressource="//@processElements.0/@ressource.0"/>
+  <processElements xsi:type="simplepdl:Stock" quantite="2" name="Devs"/>
+  <processElements xsi:type="simplepdl:Stock" quantite="4" name="Machines" ressource="//@processElements.1/@ressource.0"/>
+  <processElements xsi:type="simplepdl:Stock" quantite="1" name="Redacteur" ressource="//@processElements.1/@ressource.1"/>
+  <processElements xsi:type="simplepdl:Stock" quantite="2" name="Testeur"/>
+</simplepdl:Process>

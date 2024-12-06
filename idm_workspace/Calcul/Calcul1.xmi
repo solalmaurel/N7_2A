@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Calcul xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns="http://calcul"
+    xsi:schemaLocation="http://calcul Calcul.ecore">
+  <expression
+      xsi:type="Val"
+      entree="//@entrees.0"
+      name="x"/>
+  <expression
+      xsi:type="Unaire"
+      valeur="//@expression.0"
+      resultat="//@expression.2"/>
+  <expression
+      xsi:type="Val"
+      sortie="//@sorties.0"
+      name="sinx"/>
+  <entrees val="2.0"
+      name="x"/>
+  <sorties name="sin(x)"/>
+</Calcul>

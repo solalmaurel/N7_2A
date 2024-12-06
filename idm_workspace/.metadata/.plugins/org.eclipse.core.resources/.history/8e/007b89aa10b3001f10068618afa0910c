@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="calcul" nsURI="http://calcul" nsPrefix="calcul">
+  <eClassifiers xsi:type="ecore:EClass" name="CalculElements" abstract="true">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="unCalcul" lowerBound="1"
+        eType="#//UnCalcul" eOpposite="#//UnCalcul/calculElements"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Expression" abstract="true" eSuperTypes="#//CalculElements">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="valeur" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Binaire" eSuperTypes="#//Expression">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="binaryType" lowerBound="1"
+        eType="#//BinaryTypes"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="gauche" lowerBound="1"
+        eType="#//Expression"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="droite" lowerBound="1"
+        eType="#//Expression"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Unaire" eSuperTypes="#//Expression">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="unaryType" lowerBound="1"
+        eType="#//UnaryType"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="gauche" lowerBound="1"
+        eType="#//Expression"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Constante" eSuperTypes="#//Expression"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Entree" eSuperTypes="#//Expression"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Sortie" eSuperTypes="#//Expression"/>
+  <eClassifiers xsi:type="ecore:EEnum" name="BinaryTypes">
+    <eLiterals name="Addition"/>
+    <eLiterals name="Soustraction" value="1"/>
+    <eLiterals name="Division" value="2"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="UnaryType">
+    <eLiterals name="sin"/>
+    <eLiterals name="cos" value="1"/>
+    <eLiterals name="Opposee" value="2"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="UnCalcul">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="calculElements" upperBound="-1"
+        eType="#//CalculElements" containment="true" eOpposite="#//CalculElements/unCalcul"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+</ecore:EPackage>

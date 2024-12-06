@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<simplepdl:Process
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:simplepdl="http://simplepdl"
+    name="Cuisine">
+  <processElements
+      xsi:type="simplepdl:WorkDefinition"
+      linksToSuccessors="//@processElements.2"
+      name="Cuisiner"
+      ressource="//@processElements.3"/>
+  <processElements
+      xsi:type="simplepdl:WorkDefinition"
+      linksToPredecessors="//@processElements.2"
+      name="Manger"/>
+  <processElements
+      xsi:type="simplepdl:WorkSequence"
+      linkType="finishToStart"
+      predecessor="//@processElements.0"
+      successor="//@processElements.1"/>
+  <processElements
+      xsi:type="simplepdl:Ressource"
+      occurrences="1"
+      stock="//@processElements.4"
+      workDefinition="//@processElements.0"/>
+  <processElements
+      xsi:type="simplepdl:Stock"
+      quantite="2"
+      name="casseroles"
+      ressource="//@processElements.3"/>
+  <processElements
+      xsi:type="simplepdl:Guidance"
+      text="miam"
+      elements="//@processElements.1"/>
+</simplepdl:Process>

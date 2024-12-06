@@ -1,0 +1,164 @@
+/**
+ */
+package calcul.impl;
+
+import calcul.Binaire;
+import calcul.BinaryTypes;
+import calcul.CalculPackage;
+import org.eclipse.emf.common.notify.Notification;
+
+import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
+/**
+ * <!-- begin-user-doc -->
+ * An implementation of the model object '<em><b>Binaire</b></em>'.
+ * <!-- end-user-doc -->
+ * <p>
+ * The following features are implemented:
+ * </p>
+ * <ul>
+ *   <li>{@link calcul.impl.BinaireImpl#getBinaryType <em>Binary Type</em>}</li>
+ * </ul>
+ *
+ * @generated
+ */
+public class BinaireImpl extends ExpressionImpl implements Binaire {
+	/**
+	 * The default value of the '{@link #getBinaryType() <em>Binary Type</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getBinaryType()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final BinaryTypes BINARY_TYPE_EDEFAULT = BinaryTypes.ADDITION;
+
+	/**
+	 * The cached value of the '{@link #getBinaryType() <em>Binary Type</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getBinaryType()
+	 * @generated
+	 * @ordered
+	 */
+	protected BinaryTypes binaryType = BINARY_TYPE_EDEFAULT;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected BinaireImpl() {
+		super();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	protected EClass eStaticClass() {
+		return CalculPackage.Literals.BINAIRE;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public BinaryTypes getBinaryType() {
+		return binaryType;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setBinaryType(BinaryTypes newBinaryType) {
+		BinaryTypes oldBinaryType = binaryType;
+		binaryType = newBinaryType == null ? BINARY_TYPE_EDEFAULT : newBinaryType;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, CalculPackage.BINAIRE__BINARY_TYPE, oldBinaryType, binaryType));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object eGet(int featureID, boolean resolve, boolean coreType) {
+		switch (featureID) {
+			case CalculPackage.BINAIRE__BINARY_TYPE:
+				return getBinaryType();
+		}
+		return super.eGet(featureID, resolve, coreType);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void eSet(int featureID, Object newValue) {
+		switch (featureID) {
+			case CalculPackage.BINAIRE__BINARY_TYPE:
+				setBinaryType((BinaryTypes)newValue);
+				return;
+		}
+		super.eSet(featureID, newValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void eUnset(int featureID) {
+		switch (featureID) {
+			case CalculPackage.BINAIRE__BINARY_TYPE:
+				setBinaryType(BINARY_TYPE_EDEFAULT);
+				return;
+		}
+		super.eUnset(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public boolean eIsSet(int featureID) {
+		switch (featureID) {
+			case CalculPackage.BINAIRE__BINARY_TYPE:
+				return binaryType != BINARY_TYPE_EDEFAULT;
+		}
+		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString() {
+		if (eIsProxy()) return super.toString();
+
+		StringBuilder result = new StringBuilder(super.toString());
+		result.append(" (binaryType: ");
+		result.append(binaryType);
+		result.append(')');
+		return result.toString();
+	}
+	
+
+} //BinaireImpl

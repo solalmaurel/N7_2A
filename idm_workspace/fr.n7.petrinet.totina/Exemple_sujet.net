@@ -1,0 +1,31 @@
+net Exemple_sujet
+pl Concepteur_stock (3)
+pl Developpeur_stock (2)
+pl Machine_stock (4)
+pl Redacteur_stock (1)
+pl Testeur_stock (2)
+pl Conception_wait (1)
+pl Conception_inProgress (0)
+pl Conception_finished (0)
+pl Conception_started (0)
+pl RedactionDoc_wait (1)
+pl RedactionDoc_inProgress (0)
+pl RedactionDoc_finished (0)
+pl RedactionDoc_started (0)
+pl Programmation_wait (1)
+pl Programmation_inProgress (0)
+pl Programmation_finished (0)
+pl Programmation_started (0)
+pl RdactionTests_wait (1)
+pl RdactionTests_inProgress (0)
+pl RdactionTests_finished (0)
+pl RdactionTests_started (0)
+tr Conception_start Conception_wait Concepteur_stock*2 Machine_stock*2 -> Conception_inProgress Conception_started
+tr Conception_finish Conception_inProgress -> Conception_finished Concepteur_stock Machine_stock
+tr RedactionDoc_start RedactionDoc_wait Machine_stock Redacteur_stock Conception_started?1 -> RedactionDoc_inProgress RedactionDoc_started
+tr RedactionDoc_finish RedactionDoc_inProgress Conception_finished?1 -> RedactionDoc_finished Machine_stock Redacteur_stock
+tr Programmation_start Programmation_wait Developpeur_stock*2 Machine_stock*3 Conception_finished?1 -> Programmation_inProgress Programmation_started
+tr Programmation_finish Programmation_inProgress -> Programmation_finished Developpeur_stock Machine_stock
+tr RdactionTests_start RdactionTests_wait Machine_stock*2 Testeur_stock Conception_started?1 -> RdactionTests_inProgress RdactionTests_started
+tr RdactionTests_finish RdactionTests_inProgress Programmation_finished?1 -> RdactionTests_finished Machine_stock Testeur_stock
+

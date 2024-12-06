@@ -1,0 +1,64 @@
+
+###############################  Model ###############################
+
+
+
+###############################  Sets  ###############################
+
+set TACHES; 
+
+set PERSONNES;	
+
+################### Variables ###################
+
+var X{i in PERSONNES, j in TACHES}, binary; 
+
+
+###################  Constants: Data to load   #########################
+
+param preferences{i in PERSONNES, j in TACHES};
+
+
+
+################### Constraints ###################
+
+
+s.t. UniciteLigne{i in PERSONNES}:
+  sum{j in TACHES} X[i,j] == 1;
+
+s.t. UniciteColonne{j in TACHES}:
+  sum{i in PERSONNES} X[i,j] == 1;
+
+
+###### Objective ######
+
+maximize Pref: 
+	sum{i in PERSONNES} sum{j in TACHES} preferences[i,j]*X[i,j]; 
+
+#end;
+
+
+#default data
+
+data;
+
+set PERSONNES := 
+P1
+P2
+P3
+P4;
+
+set TACHES :=
+T1
+T2
+T3
+T4;
+
+param preferences: T1 T2 T3 T4 :=
+P1 4 7 3 9
+P2 9 8 6 3
+P3 5 1 2 2
+P4 1 3 2 4;
+
+
+end;

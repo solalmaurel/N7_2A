@@ -1,0 +1,51 @@
+/**
+ */
+package calcul;
+
+import org.eclipse.emf.common.util.EList;
+
+import org.eclipse.emf.ecore.EObject;
+
+/**
+ * <!-- begin-user-doc -->
+ * A representation of the model object '<em><b>Elements</b></em>'.
+ * <!-- end-user-doc -->
+ *
+ * <p>
+ * The following features are supported:
+ * </p>
+ * <ul>
+ *   <li>{@link calcul.CalculElements#getExpression <em>Expression</em>}</li>
+ *   <li>{@link calcul.CalculElements#getVals <em>Vals</em>}</li>
+ * </ul>
+ *
+ * @see calcul.CalculPackage#getCalculElements()
+ * @model
+ * @generated
+ */
+public interface CalculElements extends EObject {
+	/**
+	 * Returns the value of the '<em><b>Expression</b></em>' containment reference list.
+	 * The list contents are of type {@link calcul.Expression}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Expression</em>' containment reference list.
+	 * @see calcul.CalculPackage#getCalculElements_Expression()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<Expression> getExpression();
+
+	/**
+	 * Returns the value of the '<em><b>Vals</b></em>' containment reference list.
+	 * The list contents are of type {@link calcul.Link}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Vals</em>' containment reference list.
+	 * @see calcul.CalculPackage#getCalculElements_Vals()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<Link> getVals();
+
+} // CalculElements

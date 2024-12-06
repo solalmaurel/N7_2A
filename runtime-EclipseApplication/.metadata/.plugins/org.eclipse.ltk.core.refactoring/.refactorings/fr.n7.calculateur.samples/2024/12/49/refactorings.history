@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;fr.n7.calculateur.samples/UnCalcul1.xmi&apos; to &apos;UnCalcul1.calc&apos;" description="Rename resource &apos;UnCalcul1.xmi&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="UnCalcul1.xmi" name="UnCalcul1.calc" stamp="1733218178966" updateReferences="true"/>
+</session>

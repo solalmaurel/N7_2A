@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectDescription>
+	<name>.org.eclipse.jdt.core.external.folders</name>
+	<comment></comment>
+	<projects>
+	</projects>
+	<buildSpec>
+	</buildSpec>
+	<natures>
+	</natures>
+	<linkedResources>
+		<link>
+			<name>.link1</name>
+			<type>2</type>
+			<location>/home/sml3887/Documents/2A/idm_workspace/fr.n7.calculateur.edit/bin</location>
+		</link>
+		<link>
+			<name>.link2</name>
+			<type>2</type>
+			<location>/home/sml3887/Documents/2A/idm_workspace/fr.n7.calculateur.edit</location>
+		</link>
+		<link>
+			<name>.link3</name>
+			<type>2</type>
+			<location>/home/sml3887/Documents/2A/idm_workspace/fr.n7.calculateur/bin</location>
+		</link>
+		<link>
+			<name>.link4</name>
+			<type>2</type>
+			<location>/home/sml3887/Documents/2A/idm_workspace/fr.n7.calculateur</location>
+		</link>
+		<link>
+			<name>.link5</name>
+			<type>2</type>
+			<location>/home/sml3887/Documents/2A/idm_workspace/fr.n7.calculateur.editor/bin</location>
+		</link>
+		<link>
+			<name>.link6</name>
+			<type>2</type>
+			<location>/home/sml3887/Documents/2A/idm_workspace/fr.n7.calculateur.editor</location>
+		</link>
+	</linkedResources>
+</projectDescription>

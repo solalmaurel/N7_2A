@@ -1,0 +1,8 @@
+net PetriTest
+pl Prod (1)
+pl Cons (0)
+pl Prod2 (1)
+pl Cons2 (0)
+tr Trans1 Prod Prod2?1 -> Cons*6
+tr Trans2 Cons -> Prod Cons2
+

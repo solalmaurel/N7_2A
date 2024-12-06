@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<calcul:UnCalcul
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:calcul="http://calcul">
+  <calculElements
+      xsi:type="calcul:Entree"
+      name="max"
+      valeur="6.0"
+      linkToSuccessor="//@calculElements.5"/>
+  <calculElements
+      xsi:type="calcul:Entree"
+      name="min"
+      valeur="4.0"
+      linkToSuccessor="//@calculElements.4"/>
+  <calculElements
+      xsi:type="calcul:Binaire"
+      name="Add"
+      valeur="9.0"
+      linkToPredecessor="//@calculElements.4"/>
+  <calculElements
+      xsi:type="calcul:Sortie"
+      name="sortie"
+      valeur="9.0"
+      linkToPredecessor="//@calculElements.5"/>
+  <calculElements
+      xsi:type="calcul:Link"
+      name="minToAdd"
+      predecessor="//@calculElements.1"
+      successor="//@calculElements.2"/>
+  <calculElements
+      xsi:type="calcul:Link"
+      name="maxToAdd"
+      predecessor="//@calculElements.0"
+      successor="//@calculElements.3"/>
+  <calculElements
+      xsi:type="calcul:Link"/>
+</calcul:UnCalcul>

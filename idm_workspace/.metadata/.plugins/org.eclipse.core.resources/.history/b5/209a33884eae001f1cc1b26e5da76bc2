@@ -1,0 +1,1017 @@
+/**
+ */
+package calcul;
+
+import org.eclipse.emf.ecore.EAttribute;
+import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EEnum;
+import org.eclipse.emf.ecore.EPackage;
+import org.eclipse.emf.ecore.EReference;
+
+/**
+ * <!-- begin-user-doc -->
+ * The <b>Package</b> for the model.
+ * It contains accessors for the meta objects to represent
+ * <ul>
+ *   <li>each class,</li>
+ *   <li>each feature of each class,</li>
+ *   <li>each operation of each class,</li>
+ *   <li>each enum,</li>
+ *   <li>and each data type</li>
+ * </ul>
+ * <!-- end-user-doc -->
+ * @see calcul.CalculFactory
+ * @model kind="package"
+ * @generated
+ */
+public interface CalculPackage extends EPackage {
+	/**
+	 * The package name.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	String eNAME = "calcul";
+
+	/**
+	 * The package namespace URI.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	String eNS_URI = "http://calcul";
+
+	/**
+	 * The package namespace name.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	String eNS_PREFIX = "calcul";
+
+	/**
+	 * The singleton instance of the package.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	CalculPackage eINSTANCE = calcul.impl.CalculPackageImpl.init();
+
+	/**
+	 * The meta object id for the '{@link calcul.impl.CalculElementsImpl <em>Elements</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see calcul.impl.CalculElementsImpl
+	 * @see calcul.impl.CalculPackageImpl#getCalculElements()
+	 * @generated
+	 */
+	int CALCUL_ELEMENTS = 0;
+
+	/**
+	 * The feature id for the '<em><b>Expression</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALCUL_ELEMENTS__EXPRESSION = 0;
+
+	/**
+	 * The feature id for the '<em><b>Vals</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALCUL_ELEMENTS__VALS = 1;
+
+	/**
+	 * The number of structural features of the '<em>Elements</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALCUL_ELEMENTS_FEATURE_COUNT = 2;
+
+	/**
+	 * The number of operations of the '<em>Elements</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALCUL_ELEMENTS_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link calcul.impl.ExpressionImpl <em>Expression</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see calcul.impl.ExpressionImpl
+	 * @see calcul.impl.CalculPackageImpl#getExpression()
+	 * @generated
+	 */
+	int EXPRESSION = 1;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXPRESSION__NAME = 0;
+
+	/**
+	 * The feature id for the '<em><b>Valeur</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXPRESSION__VALEUR = 1;
+
+	/**
+	 * The feature id for the '<em><b>Link To Predecessor</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXPRESSION__LINK_TO_PREDECESSOR = 2;
+
+	/**
+	 * The feature id for the '<em><b>Link To Successor</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXPRESSION__LINK_TO_SUCCESSOR = 3;
+
+	/**
+	 * The number of structural features of the '<em>Expression</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXPRESSION_FEATURE_COUNT = 4;
+
+	/**
+	 * The number of operations of the '<em>Expression</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXPRESSION_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link calcul.impl.BinaireImpl <em>Binaire</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see calcul.impl.BinaireImpl
+	 * @see calcul.impl.CalculPackageImpl#getBinaire()
+	 * @generated
+	 */
+	int BINAIRE = 2;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BINAIRE__NAME = EXPRESSION__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Valeur</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BINAIRE__VALEUR = EXPRESSION__VALEUR;
+
+	/**
+	 * The feature id for the '<em><b>Link To Predecessor</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BINAIRE__LINK_TO_PREDECESSOR = EXPRESSION__LINK_TO_PREDECESSOR;
+
+	/**
+	 * The feature id for the '<em><b>Link To Successor</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BINAIRE__LINK_TO_SUCCESSOR = EXPRESSION__LINK_TO_SUCCESSOR;
+
+	/**
+	 * The feature id for the '<em><b>Binary Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BINAIRE__BINARY_TYPE = EXPRESSION_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Binaire</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BINAIRE_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Binaire</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BINAIRE_OPERATION_COUNT = EXPRESSION_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link calcul.impl.UnaireImpl <em>Unaire</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see calcul.impl.UnaireImpl
+	 * @see calcul.impl.CalculPackageImpl#getUnaire()
+	 * @generated
+	 */
+	int UNAIRE = 3;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UNAIRE__NAME = EXPRESSION__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Valeur</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UNAIRE__VALEUR = EXPRESSION__VALEUR;
+
+	/**
+	 * The feature id for the '<em><b>Link To Predecessor</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UNAIRE__LINK_TO_PREDECESSOR = EXPRESSION__LINK_TO_PREDECESSOR;
+
+	/**
+	 * The feature id for the '<em><b>Link To Successor</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UNAIRE__LINK_TO_SUCCESSOR = EXPRESSION__LINK_TO_SUCCESSOR;
+
+	/**
+	 * The feature id for the '<em><b>Unary Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UNAIRE__UNARY_TYPE = EXPRESSION_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Unaire</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UNAIRE_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Unaire</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UNAIRE_OPERATION_COUNT = EXPRESSION_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link calcul.impl.ConstanteImpl <em>Constante</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see calcul.impl.ConstanteImpl
+	 * @see calcul.impl.CalculPackageImpl#getConstante()
+	 * @generated
+	 */
+	int CONSTANTE = 4;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONSTANTE__NAME = EXPRESSION__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Valeur</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONSTANTE__VALEUR = EXPRESSION__VALEUR;
+
+	/**
+	 * The feature id for the '<em><b>Link To Predecessor</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONSTANTE__LINK_TO_PREDECESSOR = EXPRESSION__LINK_TO_PREDECESSOR;
+
+	/**
+	 * The feature id for the '<em><b>Link To Successor</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONSTANTE__LINK_TO_SUCCESSOR = EXPRESSION__LINK_TO_SUCCESSOR;
+
+	/**
+	 * The number of structural features of the '<em>Constante</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONSTANTE_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Constante</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONSTANTE_OPERATION_COUNT = EXPRESSION_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link calcul.impl.EntreeImpl <em>Entree</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see calcul.impl.EntreeImpl
+	 * @see calcul.impl.CalculPackageImpl#getEntree()
+	 * @generated
+	 */
+	int ENTREE = 5;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENTREE__NAME = EXPRESSION__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Valeur</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENTREE__VALEUR = EXPRESSION__VALEUR;
+
+	/**
+	 * The feature id for the '<em><b>Link To Predecessor</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENTREE__LINK_TO_PREDECESSOR = EXPRESSION__LINK_TO_PREDECESSOR;
+
+	/**
+	 * The feature id for the '<em><b>Link To Successor</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENTREE__LINK_TO_SUCCESSOR = EXPRESSION__LINK_TO_SUCCESSOR;
+
+	/**
+	 * The number of structural features of the '<em>Entree</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENTREE_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Entree</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENTREE_OPERATION_COUNT = EXPRESSION_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link calcul.impl.SortieImpl <em>Sortie</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see calcul.impl.SortieImpl
+	 * @see calcul.impl.CalculPackageImpl#getSortie()
+	 * @generated
+	 */
+	int SORTIE = 6;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SORTIE__NAME = EXPRESSION__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Valeur</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SORTIE__VALEUR = EXPRESSION__VALEUR;
+
+	/**
+	 * The feature id for the '<em><b>Link To Predecessor</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SORTIE__LINK_TO_PREDECESSOR = EXPRESSION__LINK_TO_PREDECESSOR;
+
+	/**
+	 * The feature id for the '<em><b>Link To Successor</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SORTIE__LINK_TO_SUCCESSOR = EXPRESSION__LINK_TO_SUCCESSOR;
+
+	/**
+	 * The number of structural features of the '<em>Sortie</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SORTIE_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Sortie</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SORTIE_OPERATION_COUNT = EXPRESSION_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link calcul.impl.LinkImpl <em>Link</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see calcul.impl.LinkImpl
+	 * @see calcul.impl.CalculPackageImpl#getLink()
+	 * @generated
+	 */
+	int LINK = 7;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LINK__NAME = 0;
+
+	/**
+	 * The feature id for the '<em><b>Predecessor</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LINK__PREDECESSOR = 1;
+
+	/**
+	 * The feature id for the '<em><b>Successor</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LINK__SUCCESSOR = 2;
+
+	/**
+	 * The number of structural features of the '<em>Link</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LINK_FEATURE_COUNT = 3;
+
+	/**
+	 * The number of operations of the '<em>Link</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LINK_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link calcul.BinaryTypes <em>Binary Types</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see calcul.BinaryTypes
+	 * @see calcul.impl.CalculPackageImpl#getBinaryTypes()
+	 * @generated
+	 */
+	int BINARY_TYPES = 8;
+
+	/**
+	 * The meta object id for the '{@link calcul.UnaryType <em>Unary Type</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see calcul.UnaryType
+	 * @see calcul.impl.CalculPackageImpl#getUnaryType()
+	 * @generated
+	 */
+	int UNARY_TYPE = 9;
+
+	/**
+	 * Returns the meta object for class '{@link calcul.CalculElements <em>Elements</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Elements</em>'.
+	 * @see calcul.CalculElements
+	 * @generated
+	 */
+	EClass getCalculElements();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link calcul.CalculElements#getExpression <em>Expression</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Expression</em>'.
+	 * @see calcul.CalculElements#getExpression()
+	 * @see #getCalculElements()
+	 * @generated
+	 */
+	EReference getCalculElements_Expression();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link calcul.CalculElements#getVals <em>Vals</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Vals</em>'.
+	 * @see calcul.CalculElements#getVals()
+	 * @see #getCalculElements()
+	 * @generated
+	 */
+	EReference getCalculElements_Vals();
+
+	/**
+	 * Returns the meta object for class '{@link calcul.Expression <em>Expression</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Expression</em>'.
+	 * @see calcul.Expression
+	 * @generated
+	 */
+	EClass getExpression();
+
+	/**
+	 * Returns the meta object for the attribute '{@link calcul.Expression#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see calcul.Expression#getName()
+	 * @see #getExpression()
+	 * @generated
+	 */
+	EAttribute getExpression_Name();
+
+	/**
+	 * Returns the meta object for the attribute '{@link calcul.Expression#getValeur <em>Valeur</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Valeur</em>'.
+	 * @see calcul.Expression#getValeur()
+	 * @see #getExpression()
+	 * @generated
+	 */
+	EAttribute getExpression_Valeur();
+
+	/**
+	 * Returns the meta object for the reference list '{@link calcul.Expression#getLinkToPredecessor <em>Link To Predecessor</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Link To Predecessor</em>'.
+	 * @see calcul.Expression#getLinkToPredecessor()
+	 * @see #getExpression()
+	 * @generated
+	 */
+	EReference getExpression_LinkToPredecessor();
+
+	/**
+	 * Returns the meta object for the reference list '{@link calcul.Expression#getLinkToSuccessor <em>Link To Successor</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Link To Successor</em>'.
+	 * @see calcul.Expression#getLinkToSuccessor()
+	 * @see #getExpression()
+	 * @generated
+	 */
+	EReference getExpression_LinkToSuccessor();
+
+	/**
+	 * Returns the meta object for class '{@link calcul.Binaire <em>Binaire</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Binaire</em>'.
+	 * @see calcul.Binaire
+	 * @generated
+	 */
+	EClass getBinaire();
+
+	/**
+	 * Returns the meta object for the attribute '{@link calcul.Binaire#getBinaryType <em>Binary Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Binary Type</em>'.
+	 * @see calcul.Binaire#getBinaryType()
+	 * @see #getBinaire()
+	 * @generated
+	 */
+	EAttribute getBinaire_BinaryType();
+
+	/**
+	 * Returns the meta object for class '{@link calcul.Unaire <em>Unaire</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Unaire</em>'.
+	 * @see calcul.Unaire
+	 * @generated
+	 */
+	EClass getUnaire();
+
+	/**
+	 * Returns the meta object for the attribute '{@link calcul.Unaire#getUnaryType <em>Unary Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Unary Type</em>'.
+	 * @see calcul.Unaire#getUnaryType()
+	 * @see #getUnaire()
+	 * @generated
+	 */
+	EAttribute getUnaire_UnaryType();
+
+	/**
+	 * Returns the meta object for class '{@link calcul.Constante <em>Constante</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Constante</em>'.
+	 * @see calcul.Constante
+	 * @generated
+	 */
+	EClass getConstante();
+
+	/**
+	 * Returns the meta object for class '{@link calcul.Entree <em>Entree</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Entree</em>'.
+	 * @see calcul.Entree
+	 * @generated
+	 */
+	EClass getEntree();
+
+	/**
+	 * Returns the meta object for class '{@link calcul.Sortie <em>Sortie</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Sortie</em>'.
+	 * @see calcul.Sortie
+	 * @generated
+	 */
+	EClass getSortie();
+
+	/**
+	 * Returns the meta object for class '{@link calcul.Link <em>Link</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Link</em>'.
+	 * @see calcul.Link
+	 * @generated
+	 */
+	EClass getLink();
+
+	/**
+	 * Returns the meta object for the attribute '{@link calcul.Link#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see calcul.Link#getName()
+	 * @see #getLink()
+	 * @generated
+	 */
+	EAttribute getLink_Name();
+
+	/**
+	 * Returns the meta object for the reference '{@link calcul.Link#getPredecessor <em>Predecessor</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Predecessor</em>'.
+	 * @see calcul.Link#getPredecessor()
+	 * @see #getLink()
+	 * @generated
+	 */
+	EReference getLink_Predecessor();
+
+	/**
+	 * Returns the meta object for the reference '{@link calcul.Link#getSuccessor <em>Successor</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Successor</em>'.
+	 * @see calcul.Link#getSuccessor()
+	 * @see #getLink()
+	 * @generated
+	 */
+	EReference getLink_Successor();
+
+	/**
+	 * Returns the meta object for enum '{@link calcul.BinaryTypes <em>Binary Types</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>Binary Types</em>'.
+	 * @see calcul.BinaryTypes
+	 * @generated
+	 */
+	EEnum getBinaryTypes();
+
+	/**
+	 * Returns the meta object for enum '{@link calcul.UnaryType <em>Unary Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>Unary Type</em>'.
+	 * @see calcul.UnaryType
+	 * @generated
+	 */
+	EEnum getUnaryType();
+
+	/**
+	 * Returns the factory that creates the instances of the model.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the factory that creates the instances of the model.
+	 * @generated
+	 */
+	CalculFactory getCalculFactory();
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * Defines literals for the meta objects that represent
+	 * <ul>
+	 *   <li>each class,</li>
+	 *   <li>each feature of each class,</li>
+	 *   <li>each operation of each class,</li>
+	 *   <li>each enum,</li>
+	 *   <li>and each data type</li>
+	 * </ul>
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	interface Literals {
+		/**
+		 * The meta object literal for the '{@link calcul.impl.CalculElementsImpl <em>Elements</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see calcul.impl.CalculElementsImpl
+		 * @see calcul.impl.CalculPackageImpl#getCalculElements()
+		 * @generated
+		 */
+		EClass CALCUL_ELEMENTS = eINSTANCE.getCalculElements();
+
+		/**
+		 * The meta object literal for the '<em><b>Expression</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference CALCUL_ELEMENTS__EXPRESSION = eINSTANCE.getCalculElements_Expression();
+
+		/**
+		 * The meta object literal for the '<em><b>Vals</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference CALCUL_ELEMENTS__VALS = eINSTANCE.getCalculElements_Vals();
+
+		/**
+		 * The meta object literal for the '{@link calcul.impl.ExpressionImpl <em>Expression</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see calcul.impl.ExpressionImpl
+		 * @see calcul.impl.CalculPackageImpl#getExpression()
+		 * @generated
+		 */
+		EClass EXPRESSION = eINSTANCE.getExpression();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute EXPRESSION__NAME = eINSTANCE.getExpression_Name();
+
+		/**
+		 * The meta object literal for the '<em><b>Valeur</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute EXPRESSION__VALEUR = eINSTANCE.getExpression_Valeur();
+
+		/**
+		 * The meta object literal for the '<em><b>Link To Predecessor</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference EXPRESSION__LINK_TO_PREDECESSOR = eINSTANCE.getExpression_LinkToPredecessor();
+
+		/**
+		 * The meta object literal for the '<em><b>Link To Successor</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference EXPRESSION__LINK_TO_SUCCESSOR = eINSTANCE.getExpression_LinkToSuccessor();
+
+		/**
+		 * The meta object literal for the '{@link calcul.impl.BinaireImpl <em>Binaire</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see calcul.impl.BinaireImpl
+		 * @see calcul.impl.CalculPackageImpl#getBinaire()
+		 * @generated
+		 */
+		EClass BINAIRE = eINSTANCE.getBinaire();
+
+		/**
+		 * The meta object literal for the '<em><b>Binary Type</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute BINAIRE__BINARY_TYPE = eINSTANCE.getBinaire_BinaryType();
+
+		/**
+		 * The meta object literal for the '{@link calcul.impl.UnaireImpl <em>Unaire</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see calcul.impl.UnaireImpl
+		 * @see calcul.impl.CalculPackageImpl#getUnaire()
+		 * @generated
+		 */
+		EClass UNAIRE = eINSTANCE.getUnaire();
+
+		/**
+		 * The meta object literal for the '<em><b>Unary Type</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute UNAIRE__UNARY_TYPE = eINSTANCE.getUnaire_UnaryType();
+
+		/**
+		 * The meta object literal for the '{@link calcul.impl.ConstanteImpl <em>Constante</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see calcul.impl.ConstanteImpl
+		 * @see calcul.impl.CalculPackageImpl#getConstante()
+		 * @generated
+		 */
+		EClass CONSTANTE = eINSTANCE.getConstante();
+
+		/**
+		 * The meta object literal for the '{@link calcul.impl.EntreeImpl <em>Entree</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see calcul.impl.EntreeImpl
+		 * @see calcul.impl.CalculPackageImpl#getEntree()
+		 * @generated
+		 */
+		EClass ENTREE = eINSTANCE.getEntree();
+
+		/**
+		 * The meta object literal for the '{@link calcul.impl.SortieImpl <em>Sortie</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see calcul.impl.SortieImpl
+		 * @see calcul.impl.CalculPackageImpl#getSortie()
+		 * @generated
+		 */
+		EClass SORTIE = eINSTANCE.getSortie();
+
+		/**
+		 * The meta object literal for the '{@link calcul.impl.LinkImpl <em>Link</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see calcul.impl.LinkImpl
+		 * @see calcul.impl.CalculPackageImpl#getLink()
+		 * @generated
+		 */
+		EClass LINK = eINSTANCE.getLink();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute LINK__NAME = eINSTANCE.getLink_Name();
+
+		/**
+		 * The meta object literal for the '<em><b>Predecessor</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference LINK__PREDECESSOR = eINSTANCE.getLink_Predecessor();
+
+		/**
+		 * The meta object literal for the '<em><b>Successor</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference LINK__SUCCESSOR = eINSTANCE.getLink_Successor();
+
+		/**
+		 * The meta object literal for the '{@link calcul.BinaryTypes <em>Binary Types</em>}' enum.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see calcul.BinaryTypes
+		 * @see calcul.impl.CalculPackageImpl#getBinaryTypes()
+		 * @generated
+		 */
+		EEnum BINARY_TYPES = eINSTANCE.getBinaryTypes();
+
+		/**
+		 * The meta object literal for the '{@link calcul.UnaryType <em>Unary Type</em>}' enum.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see calcul.UnaryType
+		 * @see calcul.impl.CalculPackageImpl#getUnaryType()
+		 * @generated
+		 */
+		EEnum UNARY_TYPE = eINSTANCE.getUnaryType();
+
+	}
+
+} //CalculPackage

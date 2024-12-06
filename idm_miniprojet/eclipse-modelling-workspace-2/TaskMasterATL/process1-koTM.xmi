@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<taskmaster:EventBundle xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:taskmaster="http://taskmaster" name="ExempleProcess1">
+  <events name="A1_start"/>
+  <events name="A1_finish">
+    <requirements xsi:type="taskmaster:Causal" target="//@events.0"/>
+    <requirements xsi:type="taskmaster:Causal"/>
+  </events>
+  <events name="A1_start"/>
+  <events name="A1_finish">
+    <requirements xsi:type="taskmaster:Causal" target="//@events.2"/>
+  </events>
+  <events name="A 2_start"/>
+  <events name="A 2_finish">
+    <requirements xsi:type="taskmaster:Causal" target="//@events.4"/>
+    <requirements xsi:type="taskmaster:Causal"/>
+  </events>
+  <events name="A1_start"/>
+  <events name="A1_finish">
+    <requirements xsi:type="taskmaster:Causal" target="//@events.6"/>
+  </events>
+</taskmaster:EventBundle>

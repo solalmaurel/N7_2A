@@ -1,0 +1,54 @@
+[comment encoding = UTF-8 /]
+[module toTINA('http://petrinet')]
+
+
+[template public petrinetToTINA(aPetriNet : PetriNet)]
+[comment @main/]
+[file (aPetriNet.name + '.net', false, 'UTF-8')]
+[let pls : OrderedSet(Place) = aPetriNet.getPLs()] 
+[if (pls->size() > 0)]
+[for (pl : Place | pls)]
+pl [pl.name/] ([pl.poids/])
+[/for]
+[/if]
+[/let]
+
+[let trs : OrderedSet(Transition) = aPetriNet.getTRs() ]
+[if (trs->size() > 0)]
+[for (tr : Transition | trs)]
+tr [tr.toTINA()/]
+[/for]
+[/if]
+[/let]
+
+[/file]
+[/template]
+
+
+[template public toTINA(tr : Transition) post (trim()) ]
+[tr.name/]  [for (arc: Arc | tr.depart)
+        before () separator (' ') after(' -> ')
+] [arc.afficherArc()/] [/for]
+[for (arc: Arc | tr.arrivee)
+        before () separator (' ') after('\n')
+] [arc.afficherArc()/]
+[/for]
+[/template]
+
+
+[query public afficherArc(arc : Arc) : String =
+	arc.name
+/]
+
+
+[query public getPLs(p: PetriNet) : OrderedSet(Place) = 
+	p.noeuds->select( e | e.oclIsKindOf(Place) )
+	->collect( e | e.oclAsType(Place) )
+	->asOrderedSet()
+/]
+
+[query public getTRs(p: PetriNet) : OrderedSet(Transition) = 
+	p.noeuds->select( e | e.oclIsKindOf(Transition) )
+	->collect( e | e.oclAsType(Transition) )
+	->asOrderedSet()
+/]

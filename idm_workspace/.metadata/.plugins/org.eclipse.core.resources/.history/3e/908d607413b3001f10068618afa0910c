@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<calcul:UnCalcul
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:calcul="http://calcul">
+  <calculElements
+      xsi:type="calcul:Binaire"
+      gauche="//@calculElements.2"
+      droite="//@calculElements.1"/>
+  <calculElements
+      xsi:type="calcul:Unaire"
+      gauche="//@calculElements.3"/>
+  <calculElements
+      xsi:type="calcul:Unaire"
+      unaryType="cos"
+      gauche="//@calculElements.3"/>
+  <calculElements
+      xsi:type="calcul:Entree"/>
+</calcul:UnCalcul>

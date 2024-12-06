@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<calcul:UnCalcul
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:calcul="http://calcul"
+    name="hert">
+  <calculElements
+      xsi:type="calcul:Entree"
+      name="yuio"
+      valeur="2.0"
+      linkToSuccessor="//@calculElements.3"/>
+  <calculElements
+      xsi:type="calcul:Binaire"
+      name="gjjk"
+      valeur="5.0"
+      linkToPredecessor="//@calculElements.3"
+      linkToSuccessor="//@calculElements.4"/>
+  <calculElements
+      xsi:type="calcul:Sortie"
+      name="yyu"
+      valeur="5.0"
+      linkToPredecessor="//@calculElements.4"/>
+  <calculElements
+      xsi:type="calcul:Link"
+      name="yuio"
+      predecessor="//@calculElements.0"
+      successor="//@calculElements.1"/>
+  <calculElements
+      xsi:type="calcul:Link"
+      name="jkjh"
+      predecessor="//@calculElements.1"
+      successor="//@calculElements.2"/>
+</calcul:UnCalcul>
