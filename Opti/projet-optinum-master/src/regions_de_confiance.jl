@@ -52,6 +52,10 @@ du gradient conjugué tronqué.
     x_sol, f_sol, flag, nb_iters, xs = regions_de_confiance(f, gradf, hessf, x0, algo_pas="gct")
 
 """
+function m(s, f::Function, g, H)
+    return f(s) + g'*s + 0.5*s'*H*s
+end
+
 function regions_de_confiance(f::Function, gradf::Function, hessf::Function, x0::Vector{<:Real};
     max_iter::Integer=5000, tol_abs::Real=1e-10, tol_rel::Real=1e-8, epsilon::Real=1, 
     Δ0::Real=2, Δmax::Real=10, γ1::Real=0.5, γ2::Real=2, η1::Real=0.25, η2::Real=0.75, algo_pas::String="gct",
@@ -63,6 +67,54 @@ function regions_de_confiance(f::Function, gradf::Function, hessf::Function, x0:
     flag  = -1
     nb_iters = 0
     xs = [x0] # vous pouvez faire xs = vcat(xs, [xk]) pour concaténer les valeurs
+
+    Δk = Δ0
+
+    #Conditions d'arrêt
+    if norm(gradf(x_sol)) <= max(tol_rel*norm(gradf(x0)), tol_abs)
+        flag = 0
+    elseif nb_iters == max_iter
+        flag = 3
+    end
+
+    while flag < 0
+        sk = cauchy(x_sol,hessf(x_sol),Δk)
+
+        rho_k = (f(x_sol) - f(x_sol + sk)) /
+            (m(zeros(length(sk)), f, gradf(x_sol), hessf(x_sol)) -
+            m(sk, f, gradf(x_sol), hessf(x_sol)))
+        
+        x_suiv = x_sol
+        if rho_k >= η1
+            x_suiv = x_sol + sk
+            xs = vcat(xs, [x_sol])
+
+            #Conditions d'arrêt
+            if norm(x_suiv - x_sol) <= epsilon*max(tol_rel*norm(x_sol), tol_abs)
+                flag = 1
+            elseif abs(f(x_suiv)-f(x_sol)) <= epsilon*max(tol_rel*abs(f(x_sol)), tol_abs)
+                flag = 2
+            end
+        end
+
+        if rho_k >= η2
+            Δk = min(γ2*Δk,Δmax)
+        elseif rho_k >= η1
+            Δk = Δk
+        else
+            Δk = γ1*Δk
+        end
+        nb_iters += 1
+
+        #Conditions d'arrêt
+        if norm(gradf(x_suiv)) <= max(tol_rel*norm(gradf(x0)), tol_abs)
+            flag = 0
+        elseif nb_iters == max_iter
+            flag = 3
+        end
+
+        x_sol = x_suiv
+    end
 
     return x_sol, f_sol, flag, nb_iters, xs
 end
